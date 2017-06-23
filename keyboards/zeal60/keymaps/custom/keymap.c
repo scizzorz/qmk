@@ -12,6 +12,7 @@
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 #define _ KC_NO
+#define __ KC_TRNS
 
 // Default layer
 [0] = {
@@ -19,34 +20,34 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 	{KC_TAB,  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_LBRC, KC_RBRC, KC_BSLS},
 	{KC_CAPS, KC_A,    KC_S,    KC_D,    KC_F,    KC_G,    KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_QUOT, KC_ENT,  _      },
 	{KC_LSFT, _,       KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_RSFT, _      },
-	{KC_LCTL, KC_LGUI, KC_LALT, _,       _,       _,       _,       KC_SPC,  _,       _,       KC_RALT, FN_MO13, FN_MO23, KC_RCTL}
+	{KC_LCTL, KC_LGUI, KC_LALT, _,       _,       _,       _,       KC_SPC,  _,       _,       FN_MO23, KC_RGUI, KC_RCTL, FN_MO13}
 },
 
 // Fn1 Layer
 [1] = {
 	{KC_GRV,  KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,  KC_DEL },
-	{KC_CAPS, KC_TRNS, KC_UP,   KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_INS,  KC_TRNS, KC_PSCR, KC_SLCK, KC_PAUS, KC_TRNS},
-	{KC_TRNS, KC_LEFT, KC_DOWN, KC_RGHT, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_HOME, KC_PGUP, KC_TRNS, KC_TRNS},
-	{KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_VOLD, KC_VOLU, KC_MUTE, KC_END,  KC_PGDN, KC_TRNS, KC_TRNS},
-	{KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS}
+	{KC_CAPS, __,      KC_UP,   __,      __,      __,      __,      __,      KC_INS,  __,      KC_PSCR, KC_SLCK, KC_PAUS, __     },
+	{__,      KC_LEFT, KC_DOWN, KC_RGHT, __,      __,      KC_HOME, KC_PGDN, KC_PGUP, KC_END,  __,      __,      __,      __     },
+	{__,      __,      KC_MUTE, KC_VOLD, KC_VOLU, __,      __,      __,      __,      __,      __,      __,      __,      __     },
+	{__,      __,      __,      __,      __,      __,      __,      __,      __,      __,      __,      __,      __,      __     }
 },
 
 // Fn2 Layer
 [2] = {
-	{KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS},
-	{KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS},
-	{KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS},
-	{KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS},
-	{KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS}
+	{__,      __,      __,      __,      __,      __,      __,      __,      __,      __,      __,      __,      __,      __     },
+	{__,      __,      __,      __,      __,      __,      __,      __,      __,      __,      __,      __,      __,      __     },
+	{__,      __,      __,      __,      __,      __,      __,      __,      __,      __,      __,      __,      __,      __     },
+	{__,      __,      __,      __,      __,      __,      __,      __,      __,      __,      __,      __,      __,      __     },
+	{__,      __,      __,      __,      __,      __,      __,      __,      __,      __,      __,      __,      __,      __     }
 },
 
 // Fn3 Layer (zeal60 Configuration)
 [3] = {
-	{KC_TRNS, EF_DEC,  EF_INC,  H1_DEC,  H1_INC,  H2_DEC,  H2_INC,  KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, BR_DEC,  BR_INC,  KC_TRNS},
-	{KC_TRNS, KC_TRNS, KC_TRNS, S1_DEC,  S1_INC,  S2_DEC,  S2_INC,  KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS},
-	{KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS},
-	{KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS},
-	{KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS}
+	{__,      EF_DEC,  EF_INC,  H1_DEC,  H1_INC,  H2_DEC,  H2_INC,  __,      __,      __,      __,      BR_DEC,  BR_INC,  __     },
+	{__,      __,      __,      S1_DEC,  S1_INC,  S2_DEC,  S2_INC,  __,      __,      __,      __,      __,      __,      __     },
+	{__,      __,      __,      __,      __,      __,      __,      __,      __,      __,      __,      __,      __,      __     },
+	{__,      __,      __,      __,      __,      __,      __,      __,      __,      __,      __,      __,      __,      __     },
+	{__,      __,      __,      __,      __,      __,      __,      __,      __,      __,      __,      __,      __,      __     }
 }
 
 };
