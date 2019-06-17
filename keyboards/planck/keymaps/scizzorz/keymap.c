@@ -50,12 +50,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [_NUM] = LAYOUT_planck_grid(
   KC_GRV,  KC_1,    KC_2,    KC_3,    KC_4,    _______, _______, _______, _______, _______, _______, KC_BSLS,
   _______, KC_5,    KC_6,    KC_7,    KC_8,    _______, KC_LBRC, KC_RBRC, KC_LPRN, KC_RPRN, _______, _______,
-  _______, KC_9,    KC_0,    KC_MINS, KC_EQL,  _______, KC_LCBR, KC_RCBR, _______, _______, _______, _______,
+  _______, KC_9,    KC_0,    KC_MINS, KC_EQL,  KC_DOT,  KC_LCBR, KC_RCBR, KC_LT,   KC_GT,   _______, _______,
   _______, _______, _______, _______, _______, _______, KC_DEL,  _______, _______, _______, _______, _______
 ),
 
 [_FN] = LAYOUT_planck_grid(
-  _______, _______, KC_UP,   _______, _______, _______, _______, _______, KC_INS,  _______, KC_PSCR, KC_DEL,
+  RESET,   _______, KC_UP,   _______, _______, _______, _______, _______, KC_INS,  _______, KC_PSCR, KC_DEL,
   _______, KC_LEFT, KC_DOWN, KC_RGHT, _______, _______, KC_HOME, KC_PGDN, KC_PGUP, KC_END,  _______, _______,
   _______, KC_MUTE, KC_VOLD, KC_VOLU, _______, _______, _______, _______, _______, _______, _______, _______,
   _______, KC_MPRV, KC_MPLY, KC_MNXT, _______, _______, _______, _______, _______, _______, _______, _______
